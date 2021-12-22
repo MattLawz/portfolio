@@ -1,16 +1,17 @@
 import Head from "next/head"
 import Link from "next/link"
 import Container from '../components/Container'
-import { Avatar, VStack, Center, Heading, Button, Text, useToast} from "@chakra-ui/react"
-import { FaGithub, FaEnvelope, FaDonate, FaShoppingCart, FaDiscord, FaCode } from "react-icons/fa";
+import { Avatar, VStack, Center, Heading, Button, Text, useToast, Spacer} from "@chakra-ui/react"
+import { FaGithub, FaEnvelope, FaCode, FaDiscord } from "react-icons/fa";
 
+    
 export default function Home() {
     const toast = useToast()
   return (
     <>
       <Head>
-  <title>Matt_Lawz</title>
-  <link rel="icon" href="/floppa.png" />
+  <title>Matt Lawz</title>
+  <link rel="icon" href="/dave.jpg" />
   <meta name="og:type" content="website" />
   <meta charSet="UTF-8" />
   <meta name="description" content="MattLawz website." />
@@ -20,18 +21,21 @@ export default function Home() {
   <meta name="og:image" content="/floppa.png" />
   <meta name="theme-color" content="#337ab7" />
   <script async src="https://arc.io/widget.min.js#Zn9FDne2"></script>
-  </Head>
+    </Head>
     <Container />
     <Center>
     <VStack spacing={4}>
-    <Avatar size="2xl" name="MattLawz" src="./floppa.png" />
+    <Avatar size="2xl" name="MattLawz" src="./dave.jpg" variant='outline' colorScheme='black' />
     {" "}
     <Heading>MattLawz</Heading>
     <Text>Fullstack Developer</Text>
+    <Text>Please know that I am very busy and I may not get back to you right away</Text>
+    <Spacer>
 
+</Spacer>
     <Link href="https://github.com/MattLawz">
     <a target="_blank">
-    <Button width="350px" leftIcon={<FaGithub />}  onClick={() =>
+    <Button width="350px" leftIcon={<FaGithub />} variant='outline' colorScheme='black' onClick={() =>
         toast({
           title: "Link Opened",
           description: "Opened the requested link!",
@@ -44,10 +48,9 @@ export default function Home() {
       </a>
     </Link>
 
-
-    <Link href="https://discord.com/users/358778308747460610">
+    <Link href="https://mattlawz.dev/discord.txt">
     <a target="_blank">
-    <Button width="350px" leftIcon={<FaDiscord />}onClick={() =>
+    <Button width="350px" leftIcon={<FaDiscord />} variant='outline' colorScheme='black' onClick={() =>
         toast({
           title: "Link Opened",
           description: "Opened the requested link!",
@@ -62,7 +65,7 @@ export default function Home() {
 
     <Link href="mailto:matt@mattlawz.dev">
     <a target="_blank">
-    <Button width="350px" leftIcon={<FaEnvelope />}onClick={() =>
+    <Button width="350px" leftIcon={<FaEnvelope />} variant='outline' colorScheme='black' onClick={() =>
         toast({
           title: "Link Opened",
           description: "Opened the requested link!",
@@ -75,39 +78,9 @@ export default function Home() {
       </a>
     </Link>
 
-    <Link href="https://payhip.com/MattDev">
-    <a target="_blank">
-    <Button width="350px" leftIcon={<FaShoppingCart />}onClick={() =>
+    <Button width="350px" leftIcon={<FaCode />} variant='outline' colorScheme='black' onClick={() =>
         toast({
-          title: "Link Opened",
-          description: "Opened the requested link!",
-          status: "success",
-          duration: 3000,
-          position: "bottom-left",
-          isClosable: true,
-        })
-      }>Shop Code</Button>
-      </a>
-    </Link>
-
-    <Link href="https://www.buymeacoffee.com/devmatt">
-    <a target="_blank">
-    <Button width="350px" leftIcon={<FaDonate />}onClick={() =>
-        toast({
-          title: "Link Opened",
-          description: "Opened the requested link!",
-          status: "success",
-          duration: 3000,
-          position: "bottom-left",
-          isClosable: true,
-        })
-      }>Donate</Button>
-      </a>
-    </Link>
-
-    <Button width="350px" leftIcon={<FaCode />}onClick={() =>
-        toast({
-          title: "Languages I Know",
+          title: "Tech",
           description: " HTML, CSS, PHP, TypeScript, Lua, C#, Chakra UI",
           status: "info",
           duration: 9000,
@@ -116,9 +89,14 @@ export default function Home() {
         })
       }>Languages & Technologies</Button>
 
+<Spacer>
+
+</Spacer>
+<Text fontSize='xs' as='i'>I am in no way shape or form affiliated with Megadeth or Dave Mustaine, I am just a fan of them and decided to use the cool picture</Text>
+
 </VStack>
 </Center>
-
+<script async src="https://arc.io/widget.min.js#Zn9FDne2"></script>
     </>
   )
 }
