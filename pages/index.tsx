@@ -96,7 +96,6 @@ export default function Home() {
 
 </VStack>
 </Center>
-<script async src="https://arc.io/widget.min.js#Zn9FDne2"></script>
     </>
   )
 }
