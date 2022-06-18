@@ -1,8 +1,8 @@
 import Head from "next/head"
 import Link from "next/link"
 import Container from '../components/Container'
-import { Avatar, VStack, Center, Heading, Button, Text, useToast, Spacer} from "@chakra-ui/react"
-import { FaGithub, FaEnvelope, FaCode, FaDiscord } from "react-icons/fa";
+import { Avatar, VStack, Center, Heading, Button, Text, useToast, Spacer, Alert, AlertIcon, AlertTitle, AlertDescription} from "@chakra-ui/react"
+import { FaGithub, FaEnvelope, FaCode, FaDiscord, FaShoppingCart } from "react-icons/fa";
 
     
 export default function Home() {
@@ -20,65 +20,43 @@ export default function Home() {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="og:image" content="/floppa.png" />
   <meta name="theme-color" content="#337ab7" />
-  <script async src="https://arc.io/widget.min.js#Zn9FDne2"></script>
     </Head>
     <Container />
     <Center>
     <VStack spacing={4}>
-    <Avatar size="2xl" name="MattLawz" src="./dave.jpg" variant='outline' colorScheme='black' />
+    <Avatar size="2xl" name="MattLawz" src="./dave.jpg" />
     {" "}
     <Heading>MattLawz</Heading>
     <Text>Fullstack Developer</Text>
-    <Text>Please know that I am very busy and I may not get back to you right away</Text>
+    <Text maxW={550}>👋 Hey, I'm Matt, I&apos;m a self-taught software engineer based in The United States. I&apos;m currently working freelance as a software engineer. My specialty is frontend development using many great scalable technologies.</Text>
     <Spacer>
 
 </Spacer>
     <Link href="https://github.com/MattLawz">
     <a target="_blank">
-    <Button width="350px" leftIcon={<FaGithub />} variant='outline' colorScheme='black' onClick={() =>
-        toast({
-          title: "Link Opened",
-          description: "Opened the requested link!",
-          status: "success",
-          duration: 3000,
-          position: "bottom-left",
-          isClosable: true,
-        })
-      }>GitHub</Button>
+    <Button width="350px" leftIcon={<FaGithub />}>GitHub</Button>
       </a>
     </Link>
 
     <Link href="https://mattlawz.dev/discord.txt">
     <a target="_blank">
-    <Button width="350px" leftIcon={<FaDiscord />} variant='outline' colorScheme='black' onClick={() =>
-        toast({
-          title: "Link Opened",
-          description: "Opened the requested link!",
-          status: "success",
-          duration: 3000,
-          position: "bottom-left",
-          isClosable: true,
-        })
-      }>Discord</Button>
+    <Button width="350px" leftIcon={<FaDiscord />}>Discord</Button>
+      </a>
+    </Link>
+
+    <Link href="https://mattlawz.sellix.io/">
+    <a target="_blank">
+    <Button width="350px" leftIcon={<FaShoppingCart />}>Shop</Button>
       </a>
     </Link>
 
     <Link href="mailto:matt@mattlawz.dev">
     <a target="_blank">
-    <Button width="350px" leftIcon={<FaEnvelope />} variant='outline' colorScheme='black' onClick={() =>
-        toast({
-          title: "Link Opened",
-          description: "Opened the requested link!",
-          status: "success",
-          duration: 3000,
-          position: "bottom-left",
-          isClosable: true,
-        })
-      }>Email</Button>
+    <Button width="350px" leftIcon={<FaEnvelope />}>Email</Button>
       </a>
     </Link>
 
-    <Button width="350px" leftIcon={<FaCode />} variant='outline' colorScheme='black' onClick={() =>
+    <Button width="350px" leftIcon={<FaCode />} onClick={() =>
         toast({
           title: "Tech",
           description: " HTML, CSS, PHP, TypeScript, Lua, C#, Chakra UI",
@@ -92,7 +70,11 @@ export default function Home() {
 <Spacer>
 
 </Spacer>
-<Text fontSize='xs' as='i'>I am in no way shape or form affiliated with Megadeth or Dave Mustaine, I am just a fan of them and decided to use the cool picture</Text>
+
+<Alert status='info' maxW={550}>
+    <AlertIcon />
+    New portfolio coming soon!
+      </Alert>
 
 </VStack>
 </Center>
